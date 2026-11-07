@@ -1,0 +1,8 @@
+model,architecture,units,dropout,parameters,epochs_run,best_epoch,best_validation_mae,test_mae,training_minutes
+Naive baseline,Current temperature,N/A,N/A,0,0,0,2.4417326009721827,2.622035899540568,0.0
+GRU 16 units,1 GRU layer,16,None,1553,4,2,2.390101671218872,,2.029876847949951
+GRU 32 units,1 GRU layer,32,None,4641,4,2,2.4154796600341797,,2.7058519244333485
+LSTM 32 units,1 LSTM layer,32,None,6049,3,1,2.456331253051758,,1.780540351716627
+LSTM 32 with recurrent dropout,1 LSTM layer,32,"0.25 recurrent, 0.50 output",6049,6,5,2.311967611312866,2.487950325012207,3.7915670498834517
+Stacked GRU 32 and 16,2 GRU layers,"32, 16","0.20 layer, 0.30 output",7025,6,4,2.3498547077178955,,6.48464943876667
+Conv1D plus GRU 32,Conv1D + GRU,"32 filters, 32 GRU",None,8641,3,1,2.4247586727142334,,1.248249718116737
